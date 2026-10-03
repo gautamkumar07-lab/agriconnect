@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriConnect — Agricultural Marketplace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">🌱</div><div><strong>AgriConnect</strong><small>Farm to market</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav id="navigation">
+      <button class="nav-item active" data-page="overview">▦ <span>Overview</span></button>
+      <button class="nav-item" data-page="marketplace">🧺 <span>Marketplace</span></button>
+      <button class="nav-item" data-page="crops">🌾 <span>Crop listings</span></button>
+      <button class="nav-item" data-page="orders">📦 <span>Orders</span></button>
+      <button class="nav-item" data-page="delivery">🚚 <span>Delivery tracking</span></button>
+      <button class="nav-item" data-page="inventory">🗃 <span>Inventory</span></button>
+      <div class="nav-label">COMMUNITY</div>
+      <button class="nav-item" data-page="farmers">👩‍🌾 <span>Farmers</span></button>
+      <button class="nav-item" data-page="buyers">🛍 <span>Buyers</span></button>
+      <button class="nav-item" data-page="gallery">🖼 <span>Crop gallery</span></button>
+      <button class="nav-item" data-page="messages">💬 <span>Messages</span><i class="nav-dot"></i></button>
+      <button class="nav-item" data-page="reviews">⭐ <span>Reviews</span></button>
+      <button class="nav-item" data-page="news">📰 <span>News feed</span></button>
+      <div class="nav-label">INSIGHTS & TOOLS</div>
+      <button class="nav-item" data-page="prices">📈 <span>Price dashboard</span></button>
+      <button class="nav-item" data-page="analytics">◔ <span>Market analytics</span></button>
+      <button class="nav-item" data-page="location">📍 <span>Location tracking</span></button>
+      <button class="nav-item" data-page="reports">📄 <span>Reports</span></button>
+      <button class="nav-item" data-page="notifications">🔔 <span>Notifications</span></button>
+      <button class="nav-item" data-page="admin">⚙ <span>Admin dashboard</span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="help-icon">?</div><div><b>Need help?</b><small>Visit help center</small></div></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="mobile-brand">🌱 AgriConnect</div>
+      <div class="search-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search crops, farmers, orders..." /></div>
+      <div class="top-actions"><button class="icon-button" id="topNotifications" title="Notifications">♧<span class="notification-dot"></span></button><div class="avatar">SB</div><div class="user-meta"><b>Sam Bahadur</b><small>Marketplace manager</small></div></div>
+    </header>
+    <section class="page-content">
+      <div class="welcome-row"><div><div class="eyebrow" id="dateLabel">AGRICULTURE • COMMUNITY • COMMERCE</div><h1 id="pageTitle">Good evening, Sam <span>🌤️</span></h1><p id="pageSubtitle">Here’s what’s happening across your agricultural marketplace today.</p></div><button class="primary-button" id="quickAdd">＋ Add a listing</button></div>
+      <div id="pageRoot"></div>
+      <footer>© 2026 AgriConnect · Growing together, from farm to market.</footer>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Add listing</h2><button id="modalClose" class="close-button">×</button></div><form id="listingForm"><label>Crop name<input name="name" required placeholder="e.g. Organic tomatoes" /></label><div class="form-grid"><label>Category<select name="category"><option>Vegetables</option><option>Fruits</option><option>Grains</option><option>Pulses</option><option>Dairy</option><option>Other</option></select></label><label>Price per quintal (₹)<input name="price" type="number" min="1" required placeholder="2500" /></label></div><div class="form-grid"><label>Available quantity (quintals)<input name="quantity" type="number" min="1" required placeholder="20" /></label><label>Location<input name="location" required placeholder="e.g. Ludhiana, Punjab" /></label></div><label>Farmer name<input name="farmer" required placeholder="Farmer or farm name" /></label><label>Description<textarea name="description" rows="3" placeholder="Freshly harvested, quality details..."></textarea></label><button class="primary-button full-width" type="submit">Publish listing</button></form></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
